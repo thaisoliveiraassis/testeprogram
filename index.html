@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: Inline-block;
+            background-color: blueviolet;
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+            width: 300px;
+            height: 300px;
+        }
+
+        div:hover {
+            background-color: rgb(0, 255, 255);
+        }
+
+        div:active {
+            background-color: rgb(253, 0, 156);
+        }
+/* active- serve para clicar e ativar a cor de algo*/
+        #ex2:active {
+
+            background-color: rgb(255, 209, 2);
+        }
+
+        /*neste exemplo abaixo selecionamos o id da div e com o sinal de (>) depois selecionamos o filho da classe no caso(h3)
+Adicionamos o (display: nome) para não aparecer nada na div */
+
+
+        #ex3 >h3 {
+            display: none;
+        }
+
+        /* Neste exemplo abaixo selecionamos a div mais a id na div adicionamos  a sub-classe de estado hover que faz com que passe o mouse para acontecer a ação,
+Que no caso e a display block que vai acontecer o texto oculto */
+        #ex3:hover>h3 {
+            /* hover=aparece algo quando se passa o mouse por cima*/
+            display: block;
+            color: rgb(0, 0, 0);
+            margin-top: 205px;
+        }
+
+        /* Aqui quando passar o mouse por cima da área ira aparecer a imagem */
+        #ex3:hover {
+
+            background-image: url(imagemteste.jpg);
+            width: 300px;
+            height: 300px;
+        }
+
+        /*Aqui quando mostrar o h3 vai adicionar um pseudo-element que esta a dentro do content antes(:before) e depois (after)*/
+        h3:before {
+            content: ">>";
+        }
+
+        h3::after {
+            content: "<<";
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo Classes</h1>
+    <p>Pseudo CLasse ela deve estar relacionada a uma classe e ela esta diretamente relacionada ao (estado) de um
+        elemento ex:</p>
+    <p>Pseudo-element esta relacionado ao elemento eles auteram o conteúdo periférico de um elemento</p>
+    <p> Se ele esta marcado,</p>
+    <p> Se ele está vazio,</p>
+    <p> Se ele está desabilitado entre outros</p>
+    <p>Para selecionarmos Pseudo-Classes utilizamos o (:) mais o estranho.</p>
+    <p> Para adicionamos pseudo-element utilizamos o (::)</p>
+    <p> Para selecionarmos o children(filho) na hierarquia, utilizamos o(>)</p>
+    <h4> Vamos criar algumas divs para exemplificar nossas pseudo-Classes.</h4>
+
+    <div id="ex1">:Exemplo1</div>
+    <div id="ex2" >exemplo2</div>
+    <div id="ex3"> exemplo3
+    <p>Passe o mouse aqui nesta área</p>
+    <h3> Olá você conseguiu ver a mensagem oculta?</h3>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+</body>
+
+</html>
